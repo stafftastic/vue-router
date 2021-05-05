@@ -144,10 +144,8 @@ function addRouteRecord (
     })
   }
 
-  if (!pathMap[record.path]) {
-    pathList.push(record.path)
-    pathMap[record.path] = record
-  }
+  pathList.push(record.path)
+  pathMap[record.path] = record
 
   if (route.alias !== undefined) {
     const aliases = Array.isArray(route.alias) ? route.alias : [route.alias]
@@ -178,15 +176,7 @@ function addRouteRecord (
   }
 
   if (name) {
-    if (!nameMap[name]) {
-      nameMap[name] = record
-    } else if (process.env.NODE_ENV !== 'production' && !matchAs) {
-      warn(
-        false,
-        `Duplicate named routes definition: ` +
-          `{ name: "${name}", path: "${record.path}" }`
-      )
-    }
+    nameMap[name] = record
   }
 }
 
