@@ -16,6 +16,7 @@
   "typings": "types/index.d.ts",
   "files": [
     "src",
+    "build",
     "dist/*.js",
     "types/*.d.ts",
     "vetur/tags.json",
